@@ -1,0 +1,57 @@
+.search-wrapper {
+  display: flex;
+  align-items: center;
+  padding-left: 60px;
+  background: #FFFFFF;
+  height: 106px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  border-bottom: 1px solid #E5E5E5;
+  margin-left: $aside-width-desktop;
+
+  @include media-breakpoint-down(desktop) {
+    margin-left: $aside-width-tablet;
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+
+  @include media-breakpoint-down(tablet) {
+    margin-left: $aside-width-phone;
+  }
+
+  @include media-breakpoint-up(desktop) {
+    margin-left: 0;
+  }
+}
+
+.search {
+  padding-left: 44px;
+  font-family: Open Sans, sans-serif;
+  font-size: 18px;
+  line-height: 28px;
+  font-weight: 400;
+  width: 100%;
+  max-width: calc(1080px - 44px);
+  height: 50px;
+  border: 1px solid rgba(51, 51, 51, 0.2);
+  border-radius: 50px;
+  background: no-repeat url('./search.png') 15px 15px;
+  margin-bottom: 27px;
+
+  &::placeholder {
+    color: rgba(0, 0, 0, 0.45);
+  }
+
+  @include media-breakpoint-up(desktop) {
+    margin-left: 20vw;
+  }
+
+  @include media-breakpoint-down(desktop) {
+    margin-bottom: 0;
+  }
+
+  @include media-breakpoint-down(tablet) {
+    font-size: 14px;
+  }
+}

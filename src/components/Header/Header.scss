@@ -1,0 +1,45 @@
+.header {
+  background: #FFFFFF;
+  height: calc(201px - 106px);
+  width: 100%;
+
+  @include media-breakpoint-down(desktop) {
+    height: calc(181px - 106px);
+  }
+
+  @include media-breakpoint-down(tablet) {
+    height: calc(169px - 106px);
+  }
+
+  &--hidden {
+    display: none;
+  }
+}
+
+.header-wrapper {
+  margin-top: 40px;
+
+  @include media-breakpoint-down(desktop) {
+    margin-top: 30px;
+  }
+
+  @include media-breakpoint-down(tablet) {
+    margin-top: 37px;
+  }
+}
+
+.header-title {
+  margin-bottom: 30px;
+  opacity: 0.85;
+
+  @include media-breakpoint-down(desktop) {
+    margin-right: 26px;
+    text-align: right;
+  }
+
+  @include media-breakpoint-down(tablet) {
+    font-size: 24px;
+    line-height: 32px;
+    margin-right: 20px;
+  }
+}

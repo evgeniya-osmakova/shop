@@ -1,0 +1,71 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.aside {
+  position: fixed;
+  z-index: 20;
+  left: 0;
+  top: 0;
+  background: #F3F4F9;
+  width: $aside-width-desktop;
+  height: 100vh;
+
+  @include media-breakpoint-down(desktop) {
+    width: $aside-width-tablet;
+  }
+
+  @include media-breakpoint-down(tablet) {
+    width: $aside-width-phone;
+  }
+
+  &__desktop {
+    @include media-breakpoint-down(desktop) {
+      display: none;
+    }
+  }
+
+  &__tablet {
+    display: none;
+
+    &--shown {
+      width: $menu-width-tablet;
+    }
+
+    @include media-breakpoint-down(desktop) {
+      display: block;
+    }
+
+    @include media-breakpoint-down(tablet) {
+      display: none;
+    }
+  }
+
+  &__phone {
+    display: none;
+
+    &--shown {
+      width: $menu-width-phone;
+    }
+
+    @include media-breakpoint-down(tablet) {
+      display: block;
+    }
+  }
+}
+
+.main {
+  width: 100%;
+}
+
+.main-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 40px;
+
+  @include media-breakpoint-down(desktop) {
+    margin-top: 27px;
+  }
+}
